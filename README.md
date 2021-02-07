@@ -9,6 +9,8 @@ the  text_manipulator_connector_ms has a listener to the same queue in RabbitMQ 
 and once a message arrives it will send a REST to the text_manipulator_persistence_ms via Feign client
 the text_manipulator_persistence_ms receives data from the REST sent via Feign and persists the data to mongodb.
 
+please view the flow diagram here - https://github.com/galpalmery/text_manipulator_messaging_ms/blob/master/flow%20diagram.JPG
+
 in order to add a new action to this microservice, a developer will need to provide the implementation to the action.
 the implementation should be written in a new ApplicationService and added to here:
 https://github.com/galpalmery/text_manipulator_messaging_ms/tree/master/src/main/java/harel/interview/textManipulator/services
