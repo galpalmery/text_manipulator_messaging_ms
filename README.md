@@ -19,7 +19,11 @@ https://github.com/galpalmery/text_manipulator_messaging_ms/blob/master/src/main
 =======
 instructions for running this project locally:
 1. install RabbitMQ, MongoDB compass, Postman, your favorite IDE
-2. download/clone the code of the 3 microservices in this project, compile and run all 3 microservices
+2. download/clone the code of the 3 microservices in this project, compile and run all 3 microservices. here are the links to the 3 repositories: 
+https://github.com/galpalmery/text_manipulator_messaging_ms
+https://github.com/galpalmery/text_manipulator_persistence_ms
+https://github.com/galpalmery/text_manipulator_connector_ms
+
 3. from postman, send this example POST REST:
 http://localhost:8080/textmanipulator/inputfilename/in.txt/outputfilename/out.txt/action/shuffle
 (note that the input and output file names can be changed to your prefernce, however you will need to create the input and output files in the root of this microservice - 
