@@ -24,8 +24,8 @@ public class MessageSender implements CommandLineRunner {
             outputFileName = args[1];
             action = args[2];
             message = "Executing action: " + action +
-                    ". Input file: " + inputFileName +
-                    ". Output file: " + outputFileName;
+                    ", Input file: " + inputFileName +
+                    ", Output file: " + outputFileName;
         }
         System.out.println("Sending message... " + message);
         rabbitTemplate.convertAndSend(MessagingConfig.topicExchangeName, MessagingConfig.routingKey, message);

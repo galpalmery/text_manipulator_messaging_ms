@@ -32,20 +32,20 @@ public class MessagingConfig {
         return BindingBuilder.bind(queue).to(exchange).with("text.manipulator.#");
     }
 
-    @Bean
-    SimpleMessageListenerContainer container(ConnectionFactory connectionFactory,
-                                             MessageListenerAdapter listenerAdapter) {
-        SimpleMessageListenerContainer container = new SimpleMessageListenerContainer();
-        container.setConnectionFactory(connectionFactory);
-        container.setQueueNames(queueName);
-        container.setMessageListener(listenerAdapter);
-        return container;
-    }
+//    @Bean
+//    SimpleMessageListenerContainer container(ConnectionFactory connectionFactory,
+//                                             MessageListenerAdapter listenerAdapter) {
+//        SimpleMessageListenerContainer container = new SimpleMessageListenerContainer();
+//        container.setConnectionFactory(connectionFactory);
+//        container.setQueueNames(queueName);
+//        container.setMessageListener(listenerAdapter);
+//        return container;
+//    }
 
-    @Bean
-    MessageListenerAdapter listenerAdapter(MessageReceiver messageReceiver) {
-        return new MessageListenerAdapter(messageReceiver, "receiveMessage");
-    }
+//    @Bean
+//    MessageListenerAdapter listenerAdapter(MessageReceiver messageReceiver) {
+//        return new MessageListenerAdapter(messageReceiver, "receiveMessage");
+//    }
 
     @Bean
     MessageReceiver receiver() {

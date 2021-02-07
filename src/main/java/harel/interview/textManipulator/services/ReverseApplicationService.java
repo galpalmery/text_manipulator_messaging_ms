@@ -2,28 +2,42 @@ package harel.interview.textManipulator.services;
 
 import harel.interview.textManipulator.services.interfaces.IBaseActionApplicationService;
 
-import java.io.File;
-import java.io.FileNotFoundException;
+import java.io.*;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 import java.util.Scanner;
 
 public class ReverseApplicationService implements IBaseActionApplicationService {
     @Override
-    public void runAction(String inputFileName, String outputFileName) {
+    public void runAction(String inputFileName, String outputFileName) throws IOException {
         reverse(inputFileName,outputFileName);
     }
 
-    private void reverse(String inputFileName, String outputFileName) {
+    private void reverse(String inputFileName, String outputFileName) throws IOException {
+        FileReader fileReader = null;
         try {
-            File file = new File(inputFileName);
-            Scanner myReader = new Scanner(file);
-            while (myReader.hasNextLine()) {
-                String data = myReader.nextLine();
-                System.out.println(data);
-            }
-            myReader.close();
+            fileReader = new FileReader(inputFileName);
         } catch (FileNotFoundException e) {
-            System.out.println("An error occurred.");
             e.printStackTrace();
         }
+        BufferedReader bufferedReader = new BufferedReader(fileReader);
+        String inputLine;
+        List<String> lineList = new ArrayList<String>();
+        while ((inputLine = bufferedReader.readLine()) != null) {
+            lineList.add(inputLine);
+        }
+        fileReader.close();
+
+        Collections.reverse(lineList);
+
+        FileWriter fileWriter = new FileWriter(outputFileName);
+        PrintWriter out = new PrintWriter(fileWriter);
+        for (String outputLine : lineList) {
+            out.println(outputLine);
+        }
+        out.flush();
+        out.close();
+        fileWriter.close();
     }
 }

@@ -6,6 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.http.ResponseEntity;
 
+import java.io.IOException;
+
 public class ActionSwitcherApplicationService {
     @Autowired
     private ApplicationContext applicationContext;

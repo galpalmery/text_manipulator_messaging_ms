@@ -1,7 +1,9 @@
 package harel.interview.textManipulator.services.interfaces;
 
+import java.io.IOException;
+
 public interface IBaseActionApplicationService {
 
-    void runAction(String inputFileName, String outputFileName);
+    void runAction(String inputFileName, String outputFileName) throws IOException;
 
 }
