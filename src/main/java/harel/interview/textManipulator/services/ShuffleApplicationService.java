@@ -6,6 +6,7 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.Random;
 
 public class ShuffleApplicationService implements IBaseActionApplicationService {
     @Override
@@ -25,7 +26,15 @@ public class ShuffleApplicationService implements IBaseActionApplicationService 
         }
         fileReader.close();
 
-        Collections.shuffle(lineList);
+//        Collections.shuffle(lineList);
+        Random rand = new Random();
+        int ListSize = lineList.size();
+        for (int i = 0; i < ListSize -1; i++) {
+            int randomIndexToSwap = rand.nextInt(ListSize-1);
+            String temp = lineList.get(randomIndexToSwap);
+            lineList.set(randomIndexToSwap,lineList.get(i));
+            lineList.set(i, temp);
+        }
 
         FileWriter fileWriter = new FileWriter(outputFileName);
         PrintWriter out = new PrintWriter(fileWriter);

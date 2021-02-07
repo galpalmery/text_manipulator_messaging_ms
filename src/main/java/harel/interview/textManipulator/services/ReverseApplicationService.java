@@ -3,10 +3,7 @@ package harel.interview.textManipulator.services;
 import harel.interview.textManipulator.services.interfaces.IBaseActionApplicationService;
 
 import java.io.*;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 
 public class ReverseApplicationService implements IBaseActionApplicationService {
     @Override
@@ -23,18 +20,17 @@ public class ReverseApplicationService implements IBaseActionApplicationService 
         }
         BufferedReader bufferedReader = new BufferedReader(fileReader);
         String inputLine;
-        List<String> lineList = new ArrayList<String>();
+        LinkedList<String> lineList = new LinkedList<>();
         while ((inputLine = bufferedReader.readLine()) != null) {
             lineList.add(inputLine);
         }
         fileReader.close();
 
-        Collections.reverse(lineList);
-
+        Iterator<String> iterator = lineList.descendingIterator();
         FileWriter fileWriter = new FileWriter(outputFileName);
         PrintWriter out = new PrintWriter(fileWriter);
-        for (String outputLine : lineList) {
-            out.println(outputLine);
+        while (iterator.hasNext()) {
+            out.println(iterator.next());
         }
         out.flush();
         out.close();
