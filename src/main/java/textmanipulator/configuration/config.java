@@ -1,10 +1,10 @@
-package harel.interview.textManipulator.configuration;
+package textmanipulator.configuration;
 
-import harel.interview.textManipulator.services.ActionSwitcherApplicationService;
-import harel.interview.textManipulator.services.ReverseApplicationService;
-import harel.interview.textManipulator.services.ShuffleApplicationService;
-import harel.interview.textManipulator.services.SortApplicationService;
-import harel.interview.textManipulator.services.interfaces.IBaseActionApplicationService;
+import textmanipulator.services.ActionSwitcherApplicationService;
+import textmanipulator.services.ReverseApplicationService;
+import textmanipulator.services.ShuffleApplicationService;
+import textmanipulator.services.SortApplicationService;
+import textmanipulator.services.interfaces.IBaseActionApplicationService;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 

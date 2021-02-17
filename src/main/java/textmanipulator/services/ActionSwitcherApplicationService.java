@@ -1,12 +1,10 @@
-package harel.interview.textManipulator.services;
+package textmanipulator.services;
 
-import harel.interview.textManipulator.messaging.MessageSender;
-import harel.interview.textManipulator.services.interfaces.IBaseActionApplicationService;
+import textmanipulator.messaging.MessageSender;
+import textmanipulator.services.interfaces.IBaseActionApplicationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.http.ResponseEntity;
-
-import java.io.IOException;
 
 public class ActionSwitcherApplicationService {
     @Autowired

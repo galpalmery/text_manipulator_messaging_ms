@@ -1,4 +1,4 @@
-package harel.interview.textManipulator.messaging;
+package textmanipulator.messaging;
 
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.boot.CommandLineRunner;

@@ -1,4 +1,4 @@
-package harel.interview.textManipulator.services.interfaces;
+package textmanipulator.services.interfaces;
 
 import java.io.IOException;
 

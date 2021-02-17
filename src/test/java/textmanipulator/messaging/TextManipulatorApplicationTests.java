@@ -1,4 +1,4 @@
-package harel.interview.textManipulator.messaging;
+package textmanipulator.messaging;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.amqp.AmqpConnectException;

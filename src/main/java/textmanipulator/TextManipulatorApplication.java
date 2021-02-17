@@ -1,4 +1,4 @@
-package harel.interview.textManipulator;
+package textmanipulator;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

@@ -1,6 +1,6 @@
-package harel.interview.textManipulator.services;
+package textmanipulator.services;
 
-import harel.interview.textManipulator.services.interfaces.IBaseActionApplicationService;
+import textmanipulator.services.interfaces.IBaseActionApplicationService;
 
 import java.io.*;
 import java.util.*;

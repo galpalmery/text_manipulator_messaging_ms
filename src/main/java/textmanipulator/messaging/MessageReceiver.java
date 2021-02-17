@@ -1,4 +1,4 @@
-package harel.interview.textManipulator.messaging;
+package textmanipulator.messaging;
 
 import java.util.concurrent.CountDownLatch;
 
